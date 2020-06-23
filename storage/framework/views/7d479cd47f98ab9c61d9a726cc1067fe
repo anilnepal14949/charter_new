@@ -1,0 +1,29 @@
+<div class="col-md-3 body_info">
+	<div class="panel panel-default panelContent">
+		<div class="panel-heading">
+			<h2 class="panel-title"> सबै बिशेष सूचनाहरु </h2>
+		</div>
+		<div class="panel-body">
+			<table class="table">
+				<tbody>
+					<?php $i = 1; ?>
+					<?php foreach($allInfos as $info): ?>
+						<tr>
+							<td> <?php echo e($i); ?> </td>
+							<td> <?php echo html_entity_decode($info->infoContent); ?> </td>
+							<td> <a href="<?php echo e(route('info.edit',$info->id)); ?>" class="btn btn-xs btn-info" data-toggle="tooltip" title="Edit Info..."><span class="fa fa-pencil"></span></a>
+							<form method="POST" action="<?php echo e(route('info.destroy',$info->id)); ?>" id="deleteForm<?php echo e($i); ?>">
+								<?php echo e(csrf_field()); ?>
+
+								<button type="button" class="btn btn-xs btn-danger" data-toggle="tooltip" title="Delete Info..."><span class="fa fa-trash" onclick="deleteThis('deleteForm<?php echo e($i); ?>');"></span></button>
+								<input type="hidden" name="_method" value="delete" />
+							</form>
+							</td>
+						</tr>
+						<?php $i++; ?>
+					<?php endforeach; ?>
+				</tbody>
+			</table>
+		</div>
+	</div>		
+</div>

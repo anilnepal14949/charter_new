@@ -1,0 +1,221 @@
+body{
+	background-color: #000000;
+	height:100vh;
+	width:98vmax;
+	margin:0 auto;
+}
+.myContainer .panel{
+	height:74vh !important;
+}
+.panel{
+	margin-bottom:0 !important;
+}
+div:focus{
+	outline:none;
+}
+/*************** left_sidebar ******************/
+.left_sidebar{
+	padding:0 !important;
+	margin-bottom:1vh;
+}
+.left_sidebar .panel{
+	border:0 !important;
+	border-radius: 0;
+	height: 74vh !important;
+}
+.panel-left .panel-heading{
+	padding:0 !important;
+}
+.panel-left .panel-title{
+	background-color: #006600;
+	min-height:8vh;
+	padding:3vh;
+	text-align: center;
+	font-weight: bolder;
+	text-transform: uppercase;
+	color:#fff;
+	font-size:2.5vh;
+	text-shadow: 1px 1px 1px #000;
+}
+.panel-left .panel-body h4, th, td{
+	color:#000;
+	line-height: 5vh;
+}
+.panel-left .panel-body th, td{
+	color:#000;
+	line-height: 5vh;
+	font-size:2.5vh;
+}
+
+/************* panel_body *********************/
+.body_info .panel{
+	height:74vh !important;
+}
+
+.body_info .panel h2#homeInfo{
+	color:#00c;
+	font-weight: bolder;
+	font-size:8vh;
+	margin-left:10%;
+	margin-top:20%;
+}
+
+/*************** footer section  *************************/
+.footer{
+	width:100%;
+	background:#fff;
+	height:6vh;
+}
+.footer strong{
+	color:#000;
+	font-size:4vh;
+	font-family: Sans;
+}
+.footer_copy{
+	width:100%;
+	background:#000;
+	height:2vh;
+}
+.footer_copy h4{
+	color:#fff;
+	font-size:2vh;
+	font-family: Sans;
+}
+.footer_copy h4 strong{
+	color:#f00;
+	text-shadow: 1px 1px 1px #000;
+}
+
+
+/*************** animation slider ******************/
+#animation_div{
+	width:100%;
+	height:74vh !important;
+	background:#fff;
+	margin-right:1%;
+	position:relative;
+	overflow:hidden;
+	padding:1%;
+}
+#animation_div>div.takeMeOnly{
+	height:100%;
+	width:100%;
+	overflow:hidden;
+}
+#animation_div>div.takeMeOnly img{
+	width:100%;
+	height:100%;
+}
+.animationDiv{
+	display:none;
+	position:absolute;
+	width:100%;
+	height:3.5vw;
+	bottom:0;
+	background:#fff;
+}
+.animationCaption{
+	display:none;
+	position:absolute;
+	bottom:0;
+	background:rgba(0,0,0,0.8);
+	color:#eee;
+	padding:1vh;
+	text-align: center;
+	width:98%;
+	font-size:2vw;
+}
+
+
+
+/**************** admin menu left ************************/
+.left_sidebar .list-group a{
+	font-size:2.5vh !important;
+	color:#006600;
+	text-shadow: 1px 1px 1px #000;
+}
+.left_sidebar .list-group a:hover{
+	color:#f00;
+	transition: all 0.4s ease;
+}
+.left_sidebar .list-group .activeMenu{
+	color:#f00;
+}
+
+/****************** admin content **********************/
+.body_info .panelContent{
+	border:none;
+	overflow:scroll;
+}
+.body_info .panelContent .panel-heading{
+	padding:0;
+}
+.body_info .panelContent .panel-title{
+	background-color: #006600;
+	min-height:8vh;
+	padding:3vh;
+	text-align: center;
+	font-weight: bolder;
+	text-transform: uppercase;
+	color:#fff;
+	font-size:3vh;
+	text-shadow: 1px 1px 1px #000;
+}
+.body_info table td{
+	font-size:3vh !important;
+}
+
+/*************** input fields *******************/
+input[type="text"],input[type="password"],input[type="email"],input[type="number"],input[type="file"],textarea{
+	background: #000 !important;
+	box-shadow:1px 2px 2px #00f;
+	color:#fff;
+}
+input[type="text"]:focus,input[type="password"]:focus,input[type="email"]:focus,input[type="number"]:focus,input[type="file"]:focus,textarea:focus{
+	box-shadow:1px 3px 3px #fff;
+}
+input[type="submit"]{
+	background:rgba(100,20,20,0.9);
+	color:#fff;
+}
+input[type="submit"]:hover{
+	background:rgba(100,0,0,0.9);
+	transition:all 0.3s ease-in-out;
+}
+
+
+/****************** selector wrapper *********************/
+#selector_wrapper{
+	display:none;
+}
+#selector{
+	display:none;
+	position:absolute;
+	left:40%;
+	top:30%;
+	width:40vh;
+	height:40vh;
+	background:rgba(0,0,200,0.9);
+	text-align:center;
+	font-size:15vh;
+}
+
+/*****************  category heading ************************/
+.categoryHeading,.postHeading{
+	background:url('../images/heading-background.jpg');
+	padding:2vh;
+	color:#fff !important;
+	font-size:4vh;
+	box-shadow: 1px 1px 1px #000;
+}
+span.numberToEnter{
+	background:#000;
+	background-position: center;
+	background-size: contain;
+	padding:1vh;
+	border-radius: 10%;
+	margin: 1vh !important;
+}
+.postHeading{
+	font-size: 3vh !important;
+}

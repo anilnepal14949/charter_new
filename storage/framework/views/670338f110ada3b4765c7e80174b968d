@@ -1,0 +1,20 @@
+<div class="col-md-3 left_sidebar">
+    <div class="panel panel-default panel-flush panel-left">
+        <div class="panel-body">
+            <div class="list-group">
+                <a href="<?php echo e(route('slider.index')); ?>" class="list-group-item <?php if($activeMenu == 'slider'): ?> activeMenu <?php endif; ?>">स्लाईडर व्यवस्थापन</a>
+                <a href="<?php echo e(route('info.index')); ?>" class="list-group-item <?php if($activeMenu == 'info'): ?> activeMenu <?php endif; ?>">सूचना तथा गतिविधि व्यवस्थापन</a>
+                <a href="<?php echo e(route('category.index')); ?>" class="list-group-item <?php if($activeMenu == 'category'): ?> activeMenu <?php endif; ?>">
+                    क्याटोगोरी व्यवस्थापन
+                </a>
+                <?php if($categories): ?>
+                    <?php foreach($categories as $category): ?>
+                        <a href="<?php echo e(route('posts.new',$category->id)); ?>" class="list-group-item <?php if($activeMenu == $category->id): ?> activeMenu <?php endif; ?>" style="margin-left:2vh; border-radius:10px 0 0 10px;"><?php echo e($category->title); ?></a>
+                    <?php endforeach; ?>
+                <?php endif; ?>
+                <a href="<?php echo e(route('home.print')); ?>" class="list-group-item <?php if($activeMenu == 'print'): ?> activeMenu <?php endif; ?>">प्रिनट व्यवस्थापन</a>
+                <a href="<?php echo e(route('admin.logout')); ?>" class="list-group-item">लग आउट</a>    
+            </div>
+        </div>
+    </div>
+</div>

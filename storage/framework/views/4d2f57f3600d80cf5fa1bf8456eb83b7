@@ -1,0 +1,46 @@
+<?php $__env->startSection('adminContent'); ?>
+<div class="col-md-6 body_info">
+	<div class="panel panel-default panelContent">
+		<div class="panel-heading">
+			<h2 class="panel-title"> 
+				नयाँ तस्बिर थप्नुहोस् 
+			</h2>
+		</div>
+		<div class="panel-body">
+			<?php if(count($errors) > 0): ?>
+				<div class="alert alert-danger">
+					<strong>Whoops!</strong> There were some problems with your input.<br><br>
+					<ul>
+						<?php foreach($errors->all() as $error): ?>
+							<li><?php echo e($error); ?></li>
+						<?php endforeach; ?>
+					</ul>
+				</div>
+			<?php endif; ?>
+			<form class="form-horizontal" role="form" method="POST" action="<?php echo e(route('slider.store')); ?>" enctype="multipart/form-data">
+				<?php echo e(csrf_field()); ?>
+
+				<?php echo $__env->make('admin.includes.slider._form', array_except(get_defined_vars(), array('__data', '__path')))->render(); ?>
+			</form>
+		</div>
+	</div>		
+</div>
+
+<?php echo $__env->make('admin.includes.slider.all', array_except(get_defined_vars(), array('__data', '__path')))->render(); ?>
+<?php $__env->stopSection(); ?>
+
+<?php $__env->startSection('footerContent'); ?>
+<script>
+    $('[data-toggle="tooltip"]').tooltip(); 
+
+    function deleteThis(id){
+    	if(confirm("Are you sure to delete this slider?")){
+    		$('form#'+id).submit();
+    	}else{
+    		return false;
+    	}
+    }
+</script>
+<?php $__env->stopSection(); ?>
+
+<?php echo $__env->make('layouts.welcome', array_except(get_defined_vars(), array('__data', '__path')))->render(); ?>

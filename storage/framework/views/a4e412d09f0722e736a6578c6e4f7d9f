@@ -1,0 +1,30 @@
+<?php $__env->startSection('content'); ?>
+<div class="container-fluid" tabindex="-1" id="bodyWrapper1">
+    <input type="hidden" id="newDashboardValue" name="newDashboardValue" value="geoweb">
+    <input type="hidden" id="categoryId" name="category_id" value="<?php echo e($category->id); ?>">
+    <div class="row">
+        <?php echo $__env->make('admin.sidebar', array_except(get_defined_vars(), array('__data', '__path')))->render(); ?>
+
+        <div class="col-md-6 body_info" id="informationDiv">
+            <?php echo $__env->make('admin.slider_new', array_except(get_defined_vars(), array('__data', '__path')))->render(); ?>
+        </div>
+
+        <?php echo $__env->make('admin.sidebar_right_new', array_except(get_defined_vars(), array('__data', '__path')))->render(); ?>
+    </div>
+</div>
+<div class="container-fluid footer">
+    <marquee direction="left">
+        <?php foreach($infos as $info): ?>
+        <strong>  <?php echo html_entity_decode($info->infoContent); ?> </strong>
+        <?php endforeach; ?>
+    </marquee>
+</div>
+<div class="container-fluid footer_copy text-center">
+    <h4> Powered by <strong> GeoWeb Solution Nepal &nbsp;&nbsp;&nbsp; </strong> Contact No.: <strong> 9845514949 / 9855069599</strong></h4>
+</div>
+<div id="selectorWrapper">
+    <input type="text" id="selector">
+</div>
+<?php $__env->stopSection(); ?>
+
+<?php echo $__env->make('layouts.app', array_except(get_defined_vars(), array('__data', '__path')))->render(); ?>

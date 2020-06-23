@@ -1,0 +1,59 @@
+<?php $__env->startSection('content'); ?>
+<div class="container-fluid">
+	<div class="row">
+		<div class="col-md-2 col-md-offset-5">
+			<div class="panel panel-default" style="margin-top:80%; background:rgba(200,10,10,0.9); border:none; box-shadow:1px 1px 1px #fff;">
+				<div class="panel-body">
+					<?php if(count($errors) > 0): ?>
+						<div class="alert alert-danger">
+							<strong>Whoops!</strong> There were some problems with your input.<br><br>
+							<ul>
+								<?php foreach($errors->all() as $error): ?>
+									<li><?php echo e($error); ?></li>
+								<?php endforeach; ?>
+							</ul>
+						</div>
+					<?php endif; ?>
+
+					<form class="form-horizontal" role="form" method="POST" action="<?php echo e(url('/admin/index')); ?>" id="loginForm">
+						<input type="hidden" name="_token" value="<?php echo csrf_token(); ?>">
+
+						<div class="form-group">
+							<div class="col-md-12">
+								<input type="text" class="form-control" name="username" value="<?php echo e(old('username')); ?>" autofocus placeholder="Enter Username...">
+							</div>
+						</div>
+
+						<div class="form-group">
+							<div class="col-md-12">
+								<input type="password" class="form-control" name="password" placeholder="Enter Password...">
+							</div>
+						</div>
+						<div class="form-group">
+							<div class="col-md-12">
+								<input type="submit" class="btn btn-primary col-md-12 col-lg-12" value="Login">
+							</div>
+						</div>
+					</form>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+<?php $__env->stopSection(); ?>
+
+<?php $__env->startSection('footerContent'); ?>
+<script type="text/javascript">
+	$(document).ready(function(){
+		$('#loginForm').on('keyup keypress', function(e) {
+		  var keyCode = e.keyCode || e.which;
+		  if (keyCode === 13) {
+		    e.preventDefault();
+		    return false;
+		  }
+		});
+	});
+</script>
+<?php $__env->stopSection(); ?>
+
+<?php echo $__env->make('layouts.app', array_except(get_defined_vars(), array('__data', '__path')))->render(); ?>

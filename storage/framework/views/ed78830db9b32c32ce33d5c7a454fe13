@@ -1,0 +1,6 @@
+<div id="animation_div">
+	<?php $i=1; ?>
+	<?php foreach($sliders as $slider): ?>
+    <div id="<?php echo e($i); ?>" class="takeMeOnly"><img src="<?php echo e(asset('/public/images/slider/original/origeo'.$slider->imgName)); ?>"></div><span class="animationDiv" id="charter<?php echo e($i); ?>"></span><span class="animationCaption" id="caption<?php echo e($i++); ?>"> <?php echo e($slider->imgDescription); ?> </span>
+    <?php endforeach; ?>
+</div>

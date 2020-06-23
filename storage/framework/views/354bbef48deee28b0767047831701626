@@ -1,0 +1,14 @@
+<?php $__env->startSection('content'); ?>
+<div class="container-fluid" style="margin-top:-1vh;">
+    <div class="row">
+        <?php echo $__env->make('admin.sidebar_left_menu', array_except(get_defined_vars(), array('__data', '__path')))->render(); ?>
+
+        <?php echo $__env->yieldContent('adminContent'); ?>
+    </div>
+</div>
+<div class="container-fluid footer_copy text-center">
+    <h4> Powered by <strong> GeoWeb Solution Nepal &nbsp;&nbsp;&nbsp; </strong> Contact No.: <strong> 9845514949 / 9855069599</strong></h4>
+</div>
+<?php $__env->stopSection(); ?>
+
+<?php echo $__env->make('layouts.app', array_except(get_defined_vars(), array('__data', '__path')))->render(); ?>

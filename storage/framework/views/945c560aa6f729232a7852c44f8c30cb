@@ -1,0 +1,15 @@
+<div class="col-md-3 left_sidebar" id="postsDiv">
+    <div class="panel panel-default panel-flush panel-left">
+        <div class="panel-heading">
+            <h2 class="panel-title"> List of Titles </h2>
+        </div>
+        <div class="panel-body">
+            <?php foreach($categories as $category): ?>
+            <h4 class="categoryHeading">
+                <span class="numberToEnter"><?php echo e($category->id); ?></span> <?php echo e($category->title); ?>
+
+            </h4>
+            <?php endforeach; ?>
+        </div>
+    </div>
+</div>
